@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Serilog;
 using WDPS.Core.Data;
 using WDPS.Core.Models;
+using System.Collections.Generic;
 
 namespace WDPS.Core.Models
 {
@@ -16,6 +17,12 @@ namespace WDPS.Core.Models
         public string ActiveWindowTitle { get; set; }
         public string ActiveProcessName { get; set; }
         public TimeSpan SessionDuration { get; set; }
+    }
+
+    public class FeatureFlagConfig
+    {
+        public Dictionary<string, bool> FeatureFlags { get; set; } = new();
+        public Dictionary<string, string> ABTestGroups { get; set; } = new(); // e.g., { "DashboardLayout": "A" }
     }
 }
 

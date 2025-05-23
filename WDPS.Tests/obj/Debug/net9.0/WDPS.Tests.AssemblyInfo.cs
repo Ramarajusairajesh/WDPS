@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WDPS.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa32a320f6b114cd0a93bb84222b62197ffe886d")]
 [assembly: System.Reflection.AssemblyProductAttribute("WDPS.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WDPS.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

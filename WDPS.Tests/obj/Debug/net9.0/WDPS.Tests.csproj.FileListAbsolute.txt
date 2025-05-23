@@ -173,3 +173,4 @@
 /home/arch/Documents/WDPS/WDPS.Tests/obj/Debug/net9.0/WDPS.Tests.pdb
 /home/arch/Documents/WDPS/WDPS.Tests/obj/Debug/net9.0/WDPS.Tests.genruntimeconfig.cache
 /home/arch/Documents/WDPS/WDPS.Tests/obj/Debug/net9.0/ref/WDPS.Tests.dll
+/home/arch/Documents/WDPS/WDPS.Tests/obj/Debug/net9.0/WDPS.Tests.sourcelink.json

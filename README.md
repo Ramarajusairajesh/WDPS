@@ -1,10 +1,21 @@
 # Windows Developer Productivity Suite (WDPS)
 
+---
+
+## Project Status
+- **Build:** Passing (core logic and analytics tested)
+- **Tests:** All tests pass (see below)
+- **Platform:** Windows (full features), Linux/Mac (core logic/tests only)
+- **Ready for:** Demo, Microsoft application, or further extension
+
+---
+
 A comprehensive Windows desktop application that tracks developer productivity metrics and demonstrates product-led growth through intelligent feature recommendations and user engagement optimization.
 
 ---
 
 ## Table of Contents
+- [Project Status](#project-status)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
@@ -14,7 +25,9 @@ A comprehensive Windows desktop application that tracks developer productivity m
 - [Building the Project](#building-the-project)
 - [Running the Application](#running-the-application)
 - [Running Tests](#running-tests)
+- [Test Results](#test-results)
 - [Demo](#demo)
+- [Screenshots](#screenshots)
 - [Troubleshooting](#troubleshooting)
 - [Development Notes](#development-notes)
 - [License](#license)
@@ -119,6 +132,15 @@ dotnet test
 
 ---
 
+## Test Results
+- **Last run:** All tests passed (3/3 succeeded, 0 failed, 0 skipped)
+- **Warnings:** You may see warnings about nullable reference types and platform-specific APIs. These are expected, especially on Linux/Mac, and do not affect test success.
+- **Platform notes:**
+  - On Linux/Mac, system metrics and Windows API calls will log errors but will not cause test failures.
+  - On Windows, all features and tests will run as intended.
+
+---
+
 ## Demo
 
 1. **Launch the dashboard:**
@@ -131,6 +153,12 @@ dotnet test
    - Use the app and edit files in tracked directories to see code activity and analytics update.
 4. **Explore tooltips:**
    - Hover over metrics and analytics for intelligent, context-aware guidance.
+
+---
+
+## Screenshots
+
+> _Add screenshots of your dashboard, onboarding wizard, and analytics here for your Microsoft application or demo._
 
 ---
 

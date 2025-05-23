@@ -11,6 +11,9 @@ namespace WDPS.Core.Data
         }
 
         public DbSet<SystemMetrics> SystemMetrics { get; set; }
+        public DbSet<CodeActivityEvent> CodeActivityEvents { get; set; }
+        public DbSet<AnalyticsSummary> AnalyticsSummaries { get; set; }
+        public DbSet<OnboardingProgress> OnboardingProgresses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

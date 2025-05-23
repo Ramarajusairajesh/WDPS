@@ -1,0 +1,13 @@
+{
+  "FeatureFlags": {
+    "EnableDarkTheme": true,
+    "EnablePremiumFeatures": false,
+    "ShowOnboarding": true,
+    "EnableTooltips": true,
+    "EnableCohortAnalysis": true
+  },
+  "ABTestGroups": {
+    "DashboardLayout": "A",
+    "OnboardingFlow": "B"
+  }
+} 

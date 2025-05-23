@@ -10,3 +10,4 @@
 /home/arch/Documents/WDPS/WDPS.Core/obj/Debug/net8.0/refint/WDPS.Core.dll
 /home/arch/Documents/WDPS/WDPS.Core/obj/Debug/net8.0/WDPS.Core.pdb
 /home/arch/Documents/WDPS/WDPS.Core/obj/Debug/net8.0/ref/WDPS.Core.dll
+/home/arch/Documents/WDPS/WDPS.Core/obj/Debug/net8.0/WDPS.Core.sourcelink.json

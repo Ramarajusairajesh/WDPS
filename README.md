@@ -14,6 +14,7 @@ A comprehensive Windows desktop application that tracks developer productivity m
 - [Building the Project](#building-the-project)
 - [Running the Application](#running-the-application)
 - [Running Tests](#running-tests)
+- [Demo](#demo)
 - [Troubleshooting](#troubleshooting)
 - [Development Notes](#development-notes)
 - [License](#license)
@@ -21,16 +22,18 @@ A comprehensive Windows desktop application that tracks developer productivity m
 ---
 
 ## Features
-- **System Metrics Collection**: CPU usage, memory consumption, active window focus, process monitoring
-- **Code Activity Tracking**: File system event monitoring, project switch detection, development tool usage
-- **Local Analytics Engine**: SQLite storage, background analytics, custom pipeline
-- **Growth-Driven Dashboard**: Multiple UI themes, A/B testing, JSON config
-- **Progressive Feature Discovery**: Intelligent tooltips, feature suggestions, local pattern storage
+- **System Metrics Collection**: Real-time CPU usage, memory consumption, active window, and session duration tracking (Windows APIs)
+- **Code Activity Tracking**: Monitors file edits, project switches, and tool usage with a code activity tracker
+- **Local Analytics Engine**: Summarizes daily engagement, feature usage, retention, and conversion funnel using SQLite and background services
+- **Growth-Driven Dashboard**: WPF UI with real-time metrics, analytics, onboarding wizard, feature suggestions, and premium feature simulation
+- **A/B Testing & Feature Flags**: JSON-configurable feature flags and A/B test groups for UI and feature experiments
+- **Progressive Feature Discovery**: Context-aware tooltips, onboarding wizard, and feature suggestions based on usage patterns
+- **Cohort Analysis**: Simulated cohort analysis with chart placeholder and retention visualization
 
 ## Tech Stack
 - **Language:** C#
 - **Framework:** .NET 8
-- **UI:** WPF (Windows only, to be implemented)
+- **UI:** WPF (Windows only)
 - **ORM:** Entity Framework Core (SQLite)
 - **Logging:** Serilog
 - **System APIs:** Windows Performance Counters, WMI, user32.dll (Windows only)
@@ -39,7 +42,7 @@ A comprehensive Windows desktop application that tracks developer productivity m
 ## Project Structure
 - `WDPS.Core/` — Core logic, models, services, data access
 - `WDPS.Tests/` — xUnit test project for core logic
-- `WDPS.App/` — (To be implemented) WPF UI project
+- `WDPS.App/` — WPF UI project (dashboard, onboarding, analytics)
 
 ## Platform Support
 - **Windows:** Full functionality (system metrics, UI, analytics, etc.)
@@ -67,26 +70,20 @@ dotnet restore
 ```
 
 ### 4. Configure the Application
-Edit `WDPS.Core/appsettings.json` as needed:
+Edit `WDPS.Core/appsettings.json` and (optionally) `WDPS.App/FeatureFlagConfig.sample.json` as needed:
+
 ```json
 {
-  "ConnectionStrings": {
-    "DefaultConnection": "Data Source=wdps.db"
+  "FeatureFlags": {
+    "EnableDarkTheme": true,
+    "EnablePremiumFeatures": false,
+    "ShowOnboarding": true,
+    "EnableTooltips": true,
+    "EnableCohortAnalysis": true
   },
-  "AppSettings": {
-    "Database": {
-      "ConnectionString": "Data Source=wdps.db"
-    },
-    "Logging": {
-      "LogFilePath": "logs/wdps.log",
-      "MinimumLevel": "Information"
-    },
-    "Metrics": {
-      "CollectionIntervalMinutes": 1,
-      "EnableCpuTracking": true,
-      "EnableMemoryTracking": true,
-      "EnableWindowTracking": true
-    }
+  "ABTestGroups": {
+    "DashboardLayout": "A",
+    "OnboardingFlow": "B"
   }
 }
 ```
@@ -102,14 +99,13 @@ dotnet build
 ---
 
 ## Running the Application
-**Note:** The main application UI (`WDPS.App`) is not yet implemented. The core logic and background services are in `WDPS.Core`.
-
-To run background services (on Windows):
-1. Create a console or WPF app referencing `WDPS.Core` and call the service registration in `ServiceCollectionExtensions`.
-2. (To be implemented) Once the WPF UI is added, run:
-   ```sh
-   dotnet run --project WDPS.App
-   ```
+To launch the WPF dashboard:
+```sh
+dotnet run --project WDPS.App
+```
+- The dashboard will open, showing real-time metrics, analytics, onboarding, feature suggestions, and premium feature simulation.
+- Tooltips are available on all key metrics and analytics for progressive feature discovery.
+- The cohort analysis section includes a chart placeholder for retention visualization.
 
 ---
 
@@ -120,6 +116,21 @@ dotnet test
 ```
 - Tests will run on any platform, but system metrics tests will only fully work on Windows.
 - On Linux/Mac, tests will pass but log errors for Windows-only features.
+
+---
+
+## Demo
+
+1. **Launch the dashboard:**
+   - Run `dotnet run --project WDPS.App` on Windows.
+   - Interact with the UI to see real-time updates, onboarding progress, and feature suggestions.
+2. **Try toggling feature flags:**
+   - Edit `WDPS.App/FeatureFlagConfig.sample.json` to enable/disable features or switch A/B test groups.
+   - Restart the app to see changes reflected in the UI.
+3. **Simulate code activity:**
+   - Use the app and edit files in tracked directories to see code activity and analytics update.
+4. **Explore tooltips:**
+   - Hover over metrics and analytics for intelligent, context-aware guidance.
 
 ---
 
@@ -138,13 +149,9 @@ dotnet test
 ---
 
 ## Development Notes
-- **To add the WPF UI:**
-  - On Windows, run:
-    ```sh
-    dotnet new wpf -n WDPS.App -f net8.0
-    dotnet sln add WDPS.App/WDPS.App.csproj
-    ```
-  - Reference `WDPS.Core` from `WDPS.App` and implement the dashboard, onboarding, A/B testing, etc.
+- **To extend the dashboard:**
+  - Add new features, charts, or onboarding steps in `WDPS.App`.
+  - Use the feature flag system to experiment with new UI/UX ideas.
 - **Feature Flags & A/B Testing:**
   - Use JSON config and local analytics as described in the requirements.
 - **Extending Analytics:**

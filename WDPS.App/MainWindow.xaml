@@ -1,0 +1,59 @@
+<Window x:Class="WDPS.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WDPS Dashboard" Height="600" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Background="#222" Height="48" VerticalAlignment="Top">
+            <TextBlock Text="WDPS Dashboard" Foreground="White" FontSize="22" Margin="16,0,32,0" VerticalAlignment="Center"/>
+            <Button Content="Light Theme" Margin="0,0,8,0" Padding="8,2"/>
+            <Button Content="Dark Theme" Margin="0,0,8,0" Padding="8,2"/>
+            <Button Content="A/B Test: Layout A" Margin="0,0,8,0" Padding="8,2"/>
+            <Button Content="A/B Test: Layout B" Margin="0,0,8,0" Padding="8,2"/>
+        </StackPanel>
+        <Grid Grid.Row="1" Margin="16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Margin="0,0,16,0">
+                <GroupBox Header="System Metrics" Margin="0,0,0,12">
+                    <StackPanel>
+                        <TextBlock x:Name="CpuUsageText" Text="CPU Usage: [value]%" FontSize="16" ToolTip="Tracks your CPU usage in real time."/>
+                        <TextBlock x:Name="MemoryUsageText" Text="Memory Usage: [value] MB" FontSize="16" ToolTip="Shows current memory consumption."/>
+                        <TextBlock x:Name="ActiveWindowText" Text="Active Window: [title]" FontSize="16" ToolTip="Displays the title of your active window."/>
+                        <TextBlock x:Name="SessionDurationText" Text="Session Duration: [duration]" FontSize="16" ToolTip="How long you've been active this session."/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Analytics & Engagement" Margin="0,0,0,12">
+                    <StackPanel>
+                        <TextBlock x:Name="DailyActiveTimeText" Text="Daily Active Time: [value] min" FontSize="16" ToolTip="Total minutes active today."/>
+                        <TextBlock x:Name="FeatureUsageText" Text="Feature Usage: [count]" FontSize="16" ToolTip="How many features you've used."/>
+                        <TextBlock x:Name="RetentionRateText" Text="Retention Rate: [rate]%" FontSize="16" ToolTip="Simulated user retention rate."/>
+                        <TextBlock x:Name="ConversionFunnelText" Text="Conversion Funnel: [step]" FontSize="16" ToolTip="Your progress in the conversion funnel."/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Cohort Analysis (A/B Test)" Margin="0,0,0,12">
+                    <StackPanel>
+                        <TextBlock x:Name="CohortChartText" Text="[Cohort chart placeholder]" FontSize="16" ToolTip="Visualizes user retention by cohort."/>
+                        <Rectangle Height="80" Fill="LightGray" Margin="0,8,0,0" ToolTip="Cohort analysis chart placeholder."/>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <GroupBox Header="Onboarding Wizard" Margin="0,0,0,12">
+                    <TextBlock x:Name="OnboardingText" Text="[Onboarding steps and progress here]" FontSize="16"/>
+                </GroupBox>
+                <GroupBox Header="Feature Suggestions" Margin="0,0,0,12">
+                    <TextBlock x:Name="FeatureSuggestionsText" Text="[Suggested features based on usage]" FontSize="16"/>
+                </GroupBox>
+                <GroupBox Header="Premium Features" Margin="0,0,0,12">
+                    <TextBlock x:Name="PremiumFeaturesText" Text="[Mock premium feature gate]" FontSize="16"/>
+                </GroupBox>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window> 

@@ -1,0 +1,12 @@
+/home/arch/Documents/WDPS/WDPS.Core/obj/Debug/net8.0/WDPS.Core.csproj.AssemblyReference.cache
+/home/arch/Documents/WDPS/WDPS.Core/obj/Debug/net8.0/WDPS.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/arch/Documents/WDPS/WDPS.Core/obj/Debug/net8.0/WDPS.Core.AssemblyInfoInputs.cache
+/home/arch/Documents/WDPS/WDPS.Core/obj/Debug/net8.0/WDPS.Core.AssemblyInfo.cs
+/home/arch/Documents/WDPS/WDPS.Core/obj/Debug/net8.0/WDPS.Core.csproj.CoreCompileInputs.cache
+/home/arch/Documents/WDPS/WDPS.Core/bin/Debug/net8.0/WDPS.Core.deps.json
+/home/arch/Documents/WDPS/WDPS.Core/bin/Debug/net8.0/WDPS.Core.dll
+/home/arch/Documents/WDPS/WDPS.Core/bin/Debug/net8.0/WDPS.Core.pdb
+/home/arch/Documents/WDPS/WDPS.Core/obj/Debug/net8.0/WDPS.Core.dll
+/home/arch/Documents/WDPS/WDPS.Core/obj/Debug/net8.0/refint/WDPS.Core.dll
+/home/arch/Documents/WDPS/WDPS.Core/obj/Debug/net8.0/WDPS.Core.pdb
+/home/arch/Documents/WDPS/WDPS.Core/obj/Debug/net8.0/ref/WDPS.Core.dll
